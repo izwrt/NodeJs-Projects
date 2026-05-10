@@ -77,7 +77,7 @@ export const deleteBookById = async (req: Request<{ id: string }>, res:Response)
       .where(eq(booksTable.id, id))
       .returning({ id: booksTable.id });
 
-    if (!result) return res.status(404).json({ error: "Book not found" });
+    if (!result) return res.status(404).json({ error: "Book not found." });
 
     return res.status(200).json({ message: `The book with id ${result.id} has been deleted.` });
   }catch(err){

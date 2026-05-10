@@ -9,6 +9,6 @@ router.get('/:id', authorController.getAutherById);
 
 router.post('/', authorController.postAuthor)
 
-router.get('/:id', authorController.deleteAuthor);
+router.delete('/:id', authorController.deleteAuthor);
 
 export default router;
